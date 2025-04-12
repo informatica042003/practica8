@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto QR </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="formContainer" class="form-container">
+            <h1>📱 Contacto QR</h1>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="apellido">Apellido*</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notas">Notas</label>
+                    <textarea id="notas" name="notas" rows="2"></textarea>
+                </div>
+                
+                <button type="submit" id="generateBtn" class="btn-pulse">Generar QR</button>
+            </form>
+        </div>
+        
+        <div id="qrContainer" class="qr-container hidden">
+            <h2>Escanea este código QR</h2>
+            <div id="qrcode"></div>
+            <p class="small">El código contiene tus datos de contacto en formato VCard</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
